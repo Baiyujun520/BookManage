@@ -35,3 +35,7 @@ def get2(request):
 
     context = {'a':a, 'b':b, 'c':c}
     return render(request, 'Book/get2.html', context)
+
+# post请求的POST属性，准备表单
+def post(request):
+    return render(request, 'Book/post.html')
