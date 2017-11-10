@@ -3,4 +3,5 @@ from Book import views
 
 urlpatterns = [
     url(r'^(\w+)/(\w+)/$', views.index),
+    url(r'^property/$', views.property),
 ]

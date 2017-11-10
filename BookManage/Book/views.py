@@ -6,3 +6,8 @@ def index(request, v1, v2):
     # 构造上下文
     context = {'v1': v1, 'v2': v2}
     return render(request, 'Book/index.html', context)
+
+def property(requeset):
+    context = {'path':requeset.path, 'method': requeset.method, 'GET':requeset.GET}
+
+    return render(requeset, 'Book/property.html', context)
