@@ -11,3 +11,27 @@ def property(requeset):
     context = {'path':requeset.path, 'method': requeset.method, 'GET':requeset.GET}
 
     return render(requeset, 'Book/property.html', context)
+
+def get(request):
+    return render(request, 'Book/get.html')
+
+
+def get1(request):
+    dict = request.GET
+
+    a = dict.get('a')
+    b = dict.get('b')
+    c = dict.get('c')
+
+    context = {'a':a, 'b':b, 'c':c}
+    return render(request, 'Book/get1.html', context)
+
+def get2(request):
+    dict = request.GET
+
+    a = dict.getlist('a')
+    b = dict.get('b')
+    c = dict.get('c')
+
+    context = {'a':a, 'b':b, 'c':c}
+    return render(request, 'Book/get2.html', context)
