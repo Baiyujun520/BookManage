@@ -39,3 +39,15 @@ def get2(request):
 # post请求的POST属性，准备表单
 def post(request):
     return render(request, 'Book/post.html')
+
+
+# 获取post表单中的信息，并且在网页展示
+def post1(request):
+    dict = request.POST
+    uname = dict.get('uname')
+    upassword = dict.get('password')
+    sex = dict.get('sex')
+    like = dict.getlist('like')
+
+    context = {'uname':uname, 'upwd':upassword, 'sex':sex, 'like':like}
+    return render(request, 'Book/post1.html', context)

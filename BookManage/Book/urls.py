@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^get1/$', views.get1),
     url(r'^get2/$', views.get2),
     url(r'^post/$', views.post),
+    url(r'^post1/$', views.post1),
 ]
