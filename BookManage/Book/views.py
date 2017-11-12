@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from Book import models
 
 # 从传来的request中提取参数
 def index(request, v1, v2):
@@ -73,3 +74,10 @@ def add_num(request, num1, num2):
 def add(request, num1, num2):
     res = num1 * num2
     return HttpResponse(res)
+
+def peopleInfo(request):
+    peoplelist = models.PeopleInfo.objects.all()
+
+    context = {'peoplelist':peoplelist}
+
+    return render(request, 'Book/peopleinfo.html', context)
