@@ -57,3 +57,9 @@ def post1(request):
 def set_session(request):
     request.session['h1'] = 'baiyujun'
     return HttpResponse('ok!')
+
+
+# 获取已经设置的session信息
+def get_session(request):
+    res = request.session.get('h1')
+    return HttpResponse(res)

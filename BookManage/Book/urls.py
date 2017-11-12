@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^post/$', views.post),
     url(r'^post1/$', views.post1),
     url(r'^set_session/$', views.set_session),
-    
+    url(r'^get_session/$', views.get_session),
+
 ]
