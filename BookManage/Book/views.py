@@ -68,3 +68,8 @@ def get_session(request):
 def add_num(request, num1, num2):
     res = num1 + num2
     return HttpResponse(res)
+
+
+def add(request, num1, num2):
+    res = num1 * num2
+    return HttpResponse(res)

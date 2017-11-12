@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^set_session/$', views.set_session),
     url(r'^get_session/$', views.get_session),
     url(r'^add_num/(\w+)/(\w+)/$', views.add_num),
+    url(r'^(\w+)/(\w+)/$', views.add),
 
 ]
