@@ -63,3 +63,8 @@ def set_session(request):
 def get_session(request):
     res = request.session.get('h1')
     return HttpResponse(res)
+
+
+def add_num(request, num1, num2):
+    res = num1 + num2
+    return HttpResponse(res)
