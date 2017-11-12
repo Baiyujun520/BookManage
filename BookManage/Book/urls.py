@@ -9,4 +9,6 @@ urlpatterns = [
     url(r'^get2/$', views.get2),
     url(r'^post/$', views.post),
     url(r'^post1/$', views.post1),
+    url(r'^set_session/$', views.set_session),
+    
 ]

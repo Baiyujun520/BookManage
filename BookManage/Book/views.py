@@ -51,3 +51,9 @@ def post1(request):
 
     context = {'uname':uname, 'upwd':upassword, 'sex':sex, 'like':like}
     return render(request, 'Book/post1.html', context)
+
+
+# 服务器设置session
+def set_session(request):
+    request.session['h1'] = 'baiyujun'
+    return HttpResponse('ok!')
