@@ -47,3 +47,35 @@ def fan(request):
 
 def fan1(request):
     return render(request, 'Book/fan1.html')
+# 获取post表单中的信息，并且在网页展示
+def post1(request):
+    dict = request.POST
+    uname = dict.get('uname')
+    upassword = dict.get('password')
+    sex = dict.get('sex')
+    like = dict.getlist('like')
+
+    context = {'uname':uname, 'upwd':upassword, 'sex':sex, 'like':like}
+    return render(request, 'Book/post1.html', context)
+
+
+# 服务器设置session
+def set_session(request):
+    request.session['h1'] = 'baiyujun'
+    return HttpResponse('ok!')
+
+
+# 获取已经设置的session信息
+def get_session(request):
+    res = request.session.get('h1')
+    return HttpResponse(res)
+
+
+def add_num(request, num1, num2):
+    res = num1 + num2
+    return HttpResponse(res)
+
+
+def add(request, num1, num2):
+    res = num1 * num2
+    return HttpResponse(res)
