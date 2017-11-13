@@ -1,19 +1,15 @@
 from django.db import models
 
 from django.db import models
+from tinymce.models import HTMLField
 
 
-# 书籍信息模型
-class BookInfo(models.Model):
-    name = models.CharField(max_length=20)  # 图书名称
-    pub_date = models.DateField(null=True)  # 发布日期
-    readcount = models.IntegerField(default=0)  # 阅读量
-    commentcount = models.IntegerField(default=0)  # 评论量
-    isDelete = models.BooleanField(default=False)  # 逻辑删除
+# 富文本编辑器
+class GoodInfo(models.Model):
+    gcontent = HTMLField(verbose_name='商品详情')
 
-    # 元类信息 : 修改表名
     class Meta:
-        db_table = 'bookinfo'
+        db_table = 'df_goods'
+        verbose_name = '商品'
+        verbose_name_plural = verbose_name
 
-    def __str__(self):
-        return self.name

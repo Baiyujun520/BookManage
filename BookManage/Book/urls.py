@@ -8,4 +8,6 @@ urlpatterns = [
     url(r'^get1/$', views.get1),
     url(r'^get2/$', views.get2),
     url(r'^post/$', views.post),
+    url(r'^fan/$', views.fan),
+    url(r'^fanafan /$', views.fan1, name='fan1'),
 ]

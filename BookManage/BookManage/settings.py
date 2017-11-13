@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
     'Book',
 )
 
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'BookManage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
-        'NAME': 'Bookdb',  # 数据库名称
+        'NAME': 'goods',  # 数据库名称
         'HOST': 'localhost',  # 数据库主机
         'PORT': '3306',  # 数据库端口
         'USER': 'root',  # 数据库用户名
@@ -90,9 +91,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -105,3 +106,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+# 配置富文本编辑器
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': 'advanced',  # 主题：高级
+    'width': 600,
+    'height': 400,
+}

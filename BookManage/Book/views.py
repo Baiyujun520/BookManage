@@ -39,3 +39,11 @@ def get2(request):
 # post请求的POST属性，准备表单
 def post(request):
     return render(request, 'Book/post.html')
+
+
+def fan(request):
+    return render(request, 'Book/fan.html')
+
+
+def fan1(request):
+    return render(request, 'Book/fan1.html')
